@@ -3,210 +3,467 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TWISX KING FAMILY CHEAT</title>
+
+<title>TWISX KING | Gaming Store</title>
 
 <style>
 *{
+  margin:0;
+  padding:0;
   box-sizing:border-box;
 }
 
-body{
-  margin:0;
-  background:#05030a;
-  color:#fff;
-  font-family:Arial,Tahoma,sans-serif;
+html{
+  scroll-behavior:smooth;
 }
 
+body{
+  background:#05050a;
+  color:#fff;
+  font-family:Arial,Tahoma,sans-serif;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND */
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  z-index:-1;
+  z-index:-2;
   background:
-    radial-gradient(circle at 20% 10%,#5b13a8 0,transparent 35%),
-    radial-gradient(circle at 80% 20%,#0d1b8a 0,transparent 35%);
+    radial-gradient(circle at 15% 10%,rgba(132,45,255,.22),transparent 30%),
+    radial-gradient(circle at 85% 25%,rgba(0,140,255,.16),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(170,0,255,.12),transparent 35%);
 }
 
-.wrap{
-  max-width:1100px;
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  opacity:.15;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+
+/* CONTAINER */
+.container{
+  width:min(1100px,92%);
   margin:auto;
-  padding:18px;
 }
 
 /* NAVBAR */
-nav{
+.navbar{
+  height:75px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:16px 0;
-  border-bottom:1px solid #29203a;
-  gap:15px;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-  font-weight:1000;
-  font-size:22px;
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:1px;
 }
 
-.logo b{
-  color:#a855f7;
+.logo span{
+  color:#9b5cff;
+  text-shadow:0 0 20px #8b42ff;
 }
 
-.social{
+.nav-links{
   display:flex;
-  gap:8px;
-  flex-wrap:wrap;
+  gap:10px;
 }
 
-.btn{
-  display:inline-block;
-  padding:9px 14px;
-  border-radius:999px;
-  background:#a855f7;
+.nav-links a{
   color:#fff;
-  border:1px solid #a855f7;
   text-decoration:none;
+  padding:10px 16px;
+  border-radius:10px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  background:#8b42ff;
+  transform:translateY(-2px);
 }
 
 /* HERO */
 .hero{
-  margin-top:24px;
-  padding:42px 25px;
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  border:1px solid #3b2850;
-  border-radius:26px;
-  background:linear-gradient(135deg,#120820,#24103f);
+  padding:70px 0;
 }
 
-.badge{
+.hero-content{
+  max-width:800px;
+}
+
+.hero-badge{
   display:inline-block;
-  padding:7px 12px;
-  border-radius:999px;
-  background:#a855f7;
-  color:#fff;
+  padding:8px 16px;
+  border-radius:50px;
+  background:rgba(139,66,255,.12);
+  border:1px solid rgba(155,92,255,.4);
+  color:#c5a6ff;
+  font-size:14px;
+  margin-bottom:22px;
 }
 
-h1{
-  font-size:clamp(34px,7vw,65px);
-  margin:14px 0 8px;
+.hero h1{
+  font-size:clamp(45px,9vw,85px);
+  line-height:1;
+  font-weight:1000;
+  margin-bottom:20px;
 }
 
-h1 span{
-  color:#c084fc;
+.hero h1 span{
+  color:#9b5cff;
+  text-shadow:
+    0 0 15px #9b5cff,
+    0 0 45px rgba(155,92,255,.5);
 }
 
 .hero p{
-  color:#bbb4c7;
-  font-size:17px;
+  color:#aaa;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  padding:14px 25px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.primary{
+  background:linear-gradient(135deg,#8b42ff,#5c20d8);
+  box-shadow:0 0 25px rgba(139,66,255,.35);
+}
+
+.secondary{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.hero-btn:hover{
+  transform:translateY(-4px);
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-title small{
+  color:#9b5cff;
+  font-weight:bold;
+}
+
+.section-title h2{
+  font-size:38px;
+  margin-top:8px;
 }
 
 /* PRODUCTS */
 .products{
   display:grid;
   grid-template-columns:1fr;
-  gap:24px;
-  margin-top:24px;
+  gap:30px;
+  padding-bottom:70px;
 }
 
-.card{
+.product{
+  position:relative;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.07),
+    rgba(255,255,255,.025)
+  );
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:25px;
   overflow:hidden;
-  background:#0d0a13;
-  border:1px solid #33243e;
-  border-radius:22px;
-  box-shadow:0 15px 45px #0008;
+  box-shadow:0 25px 80px rgba(0,0,0,.4);
+  transition:.4s;
 }
 
-.card img{
+.product:hover{
+  transform:translateY(-7px);
+  border-color:rgba(155,92,255,.5);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.5),
+    0 0 35px rgba(139,66,255,.12);
+}
+
+.product-image{
+  position:relative;
+  background:#08080e;
+  overflow:hidden;
+}
+
+.product-image img{
   width:100%;
-  height:auto;
+  max-height:430px;
   display:block;
   object-fit:cover;
+  transition:.5s;
 }
 
-.card-body{
-  padding:20px;
+.product:hover .product-image img{
+  transform:scale(1.03);
 }
 
-.card h2{
-  margin:0 0 8px;
-  font-size:29px;
+.product-tag{
+  position:absolute;
+  top:18px;
+  right:18px;
+  padding:8px 14px;
+  border-radius:50px;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.15);
+  color:#fff;
+  font-size:13px;
 }
 
-.card p{
-  color:#9f96aa;
+.product-content{
+  padding:25px;
 }
 
-.prices{
+.product-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:10px;
+}
+
+.product-header h3{
+  font-size:30px;
+}
+
+.status{
+  font-size:12px;
+  color:#55ff9a;
+  background:rgba(40,220,110,.1);
+  border:1px solid rgba(40,220,110,.25);
+  padding:7px 10px;
+  border-radius:50px;
+}
+
+.description{
+  color:#999;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+/* PRICES */
+.price-grid{
   display:grid;
+  grid-template-columns:repeat(3,1fr);
   gap:10px;
-  margin-top:18px;
+  margin-bottom:20px;
 }
 
 .price{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px;
-  background:#160f20;
-  border:1px solid #29203a;
+  text-align:center;
+  padding:16px 10px;
+  background:rgba(0,0,0,.25);
+  border:1px solid rgba(255,255,255,.08);
   border-radius:15px;
 }
 
 .price span{
-  color:#fff;
+  display:block;
+  color:#888;
+  font-size:13px;
+  margin-bottom:7px;
 }
 
 .price strong{
-  color:#c084fc;
-  font-size:20px;
+  font-size:22px;
+  color:#c49cff;
 }
 
+/* BUY */
 .buy{
   display:block;
+  width:100%;
+  padding:16px;
   text-align:center;
-  margin-top:18px;
-  padding:15px;
   border-radius:14px;
-  background:#20d65b;
-  color:#061008;
-  font-weight:bold;
+  background:linear-gradient(135deg,#20dc6b,#12ad50);
+  color:#031108;
+  font-weight:900;
   text-decoration:none;
-  font-size:18px;
+  transition:.3s;
+}
+
+.buy:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(32,220,107,.2);
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  padding-bottom:70px;
+}
+
+.feature{
+  text-align:center;
+  padding:25px 15px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.03);
+  border-radius:18px;
+}
+
+.feature-icon{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.feature h4{
+  margin-bottom:7px;
+}
+
+.feature p{
+  color:#888;
+  font-size:13px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  padding:60px 20px;
+  margin-bottom:50px;
+  border-radius:25px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,66,255,.12),
+      rgba(0,120,255,.06)
+    );
+  border:1px solid rgba(155,92,255,.2);
+}
+
+.contact h2{
+  font-size:35px;
+  margin-bottom:12px;
+}
+
+.contact p{
+  color:#999;
+  margin-bottom:25px;
+}
+
+.social-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.social-buttons a{
+  padding:13px 22px;
+  border-radius:12px;
+  color:#fff;
+  text-decoration:none;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
 }
 
 /* FOOTER */
-.section{
-  margin-top:24px;
-  padding:24px;
-  text-align:center;
-  border:1px solid #29203a;
-  border-radius:20px;
-  background:#09070d;
-}
-
 footer{
-  text-align:center;
-  color:#777;
+  border-top:1px solid rgba(255,255,255,.08);
   padding:25px 0;
+  text-align:center;
+  color:#666;
+  font-size:13px;
 }
 
 /* MOBILE */
 @media(max-width:700px){
-  .wrap{
-    padding:12px;
+
+  .navbar{
+    height:auto;
+    padding:15px 0;
+    flex-direction:column;
+    gap:14px;
   }
 
-  nav{
-    flex-direction:column;
-    align-items:flex-start;
+  .nav-links{
+    width:100%;
+  }
+
+  .nav-links a{
+    flex:1;
+    text-align:center;
   }
 
   .hero{
-    padding:30px 18px;
+    min-height:450px;
+    padding:55px 0;
   }
 
-  .card-body{
-    padding:16px;
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .section-title h2{
+    font-size:30px;
+  }
+
+  .product-content{
+    padding:18px;
+  }
+
+  .product-header{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .product-header h3{
+    font-size:27px;
+  }
+
+  .price-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .contact h2{
+    font-size:28px;
   }
 }
 </style>
@@ -214,149 +471,268 @@ footer{
 
 <body>
 
-<div class="wrap">
+<div class="container">
 
   <!-- NAVBAR -->
-  <nav>
+  <nav class="navbar">
+
     <div class="logo">
-      TWISX <b>KING</b> FAMILY
+      TWISX <span>KING</span>
     </div>
 
-    <div class="social">
-      <a class="btn"
-         href="https://wa.me/212663851906"
-         target="_blank">
-        WhatsApp
-      </a>
-
-      <a class="btn"
-         href="https://www.tiktok.com/@twisxking"
-         target="_blank">
-        TikTok
-      </a>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
     </div>
+
   </nav>
 
 
   <!-- HERO -->
   <section class="hero">
-    <span class="badge">🎮 GAMING STORE</span>
 
-    <h1>
-      TWISX <span>KING</span> CHEAT
-    </h1>
+    <div class="hero-content">
 
-    <p>
-      اختار المنتج وبدا الشراء عبر WhatsApp
-    </p>
+      <div class="hero-badge">
+        ⚡ PREMIUM GAMING STORE
+      </div>
+
+      <h1>
+        TWISX <span>KING</span>
+      </h1>
+
+      <p>
+        Welcome to TWISX KING FAMILY.
+        <br>
+        Choose your product and contact us directly on WhatsApp.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="hero-btn primary"
+          href="https://wa.me/212663851906"
+          target="_blank">
+          💬 WhatsApp
+        </a>
+
+        <a
+          class="hero-btn secondary"
+          href="https://www.tiktok.com/@twisxking"
+          target="_blank">
+          🎵 TikTok
+        </a>
+
+      </div>
+
+    </div>
+
   </section>
 
 
   <!-- PRODUCTS -->
-  <section class="products">
+  <section id="products">
 
-    <!-- 1 - DRIP CLIENT -->
-    <article class="card">
+    <div class="section-title">
+      <small>OUR PRODUCTS</small>
+      <h2>Choose Your Product</h2>
+    </div>
 
-      <img
-        src="Achraf1.jpg"
-        alt="DRIP CLIENT">
 
-      <div class="card-body">
+    <div class="products">
 
-        <h2>🟣 DRIP CLIENT</h2>
 
-        <p>
-          اختر مدة الاشتراك
-        </p>
+      <!-- DRIP CLIENT -->
+      <article class="product">
 
-        <div class="prices">
+        <div class="product-image">
 
-          <div class="price">
-            <span>Day 1</span>
-            <strong>$2</strong>
-          </div>
+          <img
+            src="Achraf1.jpg"
+            alt="DRIP CLIENT">
 
-          <div class="price">
-            <span>Days 7</span>
-            <strong>$5</strong>
-          </div>
-
-          <div class="price">
-            <span>Days 30</span>
-            <strong>$18</strong>
+          <div class="product-tag">
+            🔥 PREMIUM
           </div>
 
         </div>
 
-        <a
-          class="buy"
-          href="https://wa.me/212663851906?text=مرحبا،%20بغيت%20DRIP%20CLIENT"
-          target="_blank">
-          🛒 شراء DRIP CLIENT عبر WhatsApp
-        </a>
+        <div class="product-content">
 
-      </div>
-    </article>
+          <div class="product-header">
 
+            <h3>🟣 DRIP CLIENT</h3>
 
-    <!-- 2 - FLUORITE -->
-    <article class="card">
+            <div class="status">
+              ● AVAILABLE
+            </div>
 
-      <img
-        src="Achraf2.jpg"
-        alt="FLUORITE">
-
-      <div class="card-body">
-
-        <h2>🔵 FLUORITE</h2>
-
-        <p>
-          اختر مدة الاشتراك
-        </p>
-
-        <div class="prices">
-
-          <div class="price">
-            <span>Day 1</span>
-            <strong>$5</strong>
           </div>
 
-          <div class="price">
-            <span>Days 7</span>
-            <strong>$15</strong>
+          <p class="description">
+            Premium gaming client.
+            Choose your subscription and contact us to order.
+          </p>
+
+          <div class="price-grid">
+
+            <div class="price">
+              <span>1 DAY</span>
+              <strong>$2</strong>
+            </div>
+
+            <div class="price">
+              <span>7 DAYS</span>
+              <strong>$5</strong>
+            </div>
+
+            <div class="price">
+              <span>30 DAYS</span>
+              <strong>$18</strong>
+            </div>
+
           </div>
 
-          <div class="price">
-            <span>Days 30</span>
-            <strong>$25</strong>
+          <a
+            class="buy"
+            href="https://wa.me/212663851906?text=Hello%20I%20want%20to%20buy%20DRIP%20CLIENT"
+            target="_blank">
+            🛒 BUY DRIP CLIENT
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- FLUORITE -->
+      <article class="product">
+
+        <div class="product-image">
+
+          <img
+            src="Achraf2.jpg"
+            alt="FLUORITE">
+
+          <div class="product-tag">
+            ⭐ PREMIUM
           </div>
 
         </div>
 
-        <a
-          class="buy"
-          href="https://wa.me/212663851906?text=مرحبا،%20بغيت%20FLUORITE"
-          target="_blank">
-          🛒 شراء FLUORITE عبر WhatsApp
-        </a>
+        <div class="product-content">
 
-      </div>
-    </article>
+          <div class="product-header">
+
+            <h3>🔵 FLUORITE</h3>
+
+            <div class="status">
+              ● AVAILABLE
+            </div>
+
+          </div>
+
+          <p class="description">
+            Premium gaming product.
+            Choose your subscription and contact us to order.
+          </p>
+
+          <div class="price-grid">
+
+            <div class="price">
+              <span>1 DAY</span>
+              <strong>$5</strong>
+            </div>
+
+            <div class="price">
+              <span>7 DAYS</span>
+              <strong>$15</strong>
+            </div>
+
+            <div class="price">
+              <span>30 DAYS</span>
+              <strong>$25</strong>
+            </div>
+
+          </div>
+
+          <a
+            class="buy"
+            href="https://wa.me/212663851906?text=Hello%20I%20want%20to%20buy%20FLUORITE"
+            target="_blank">
+            🛒 BUY FLUORITE
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h4>FAST SERVICE</h4>
+      <p>Quick response through WhatsApp.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <h4>SECURE ORDER</h4>
+      <p>Contact us directly before purchasing.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🎮</div>
+      <h4>GAMING STORE</h4>
+      <p>Premium gaming products in one place.</p>
+    </div>
 
   </section>
 
 
   <!-- CONTACT -->
-  <section class="section">
-    <h2>📱 TWISX KING FAMILY CHEAT</h2>
-    <p>WhatsApp: +212 663 851 906</p>
-    <p>TikTok: @twisxking</p>
+  <section id="contact" class="contact">
+
+    <h2>Ready to Order?</h2>
+
+    <p>
+      Contact TWISX KING FAMILY now.
+    </p>
+
+    <div class="social-buttons">
+
+      <a
+        href="https://wa.me/212663851906"
+        target="_blank">
+        📱 WhatsApp
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@twisxking"
+        target="_blank">
+        🎵 TikTok
+      </a>
+
+      <a
+        href="https://whatsapp.com/channel/0029Vb78U4ER9ZA0Hk5VJ02V"
+        target="_blank">
+        📢 WhatsApp Channel
+      </a>
+
+    </div>
+
   </section>
 
 
   <footer>
-    © 2026 TWISX KING FAMILY CHEAT
+    © 2026 TWISX KING FAMILY — All Rights Reserved
   </footer>
 
 </div>
